@@ -1,4 +1,5 @@
-import colors from 'vuetify/es5/util/colors'
+import colors from 'vuetify/es5/util/colors';
+// import "material-design-icons-iconfont/dist/material-design-icons.css"; // Ensure you are using css-loader
 
 export default {
   mode: 'universal',
@@ -72,6 +73,9 @@ export default {
           error: colors.deepOrange.accent4,
           success: colors.green.accent3
         }
+      },
+      icons: {
+        iconfont: 'md'
       }
     }
   },
@@ -82,6 +86,11 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {}
+    extend(config, ctx) {
+      // config.module.rules.push({
+      //   test: /\.css$/,
+      //   loader: "css-loader"
+      // });
+    }
   }
-}
+};
